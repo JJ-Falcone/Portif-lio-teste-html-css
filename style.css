@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root{
+    font-size: 12px;
     --principal: #E5E5CB;
     --secundaria: #1A120B;
     --detalhes: #3C2A21;
@@ -10,54 +11,62 @@
     --fonte-texto: 'Montserrat', sans-serif;
 }
 
+
+
 body{
+    margin:0 auto;
     display: flex;
+    min-height: 100vh;
+    width: 75rem;
     flex-direction: column;
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    background-color: var(--principal)
+    justify-content: center;
+    background-color: var(--principal);
+    overflow-x: hidden;
     
 }
 
 header{
+    width: 100%;
+    justify-content: flex-start;
     align-items: end;
-    width: 60vw;
-    height: 3.6vw;
+    margin-left: 100px;
+    height: 5.875rem;
     display: flex;
-    margin:  0  0 6vw 0 ;
+    margin:  0  0 5.624rem 0 ;
 }
 
 header a{
-    padding: 0 0.35vw;
-    margin: 0 5.3vw 0 0;
+    margin: 0 5rem 0 0;
     text-decoration: none;
     color: var(--detalhes);
-    font-size: 1.2vw;
+    font-size: 1.5rem;
     font-family: var(--fonte-texto);
     font-weight: 600;
 }
 
 .sobremim{
-    margin-bottom: 2vw;
+    margin-bottom: 2.5rem;
 }
 
-section{
-    width: 50%;
-    
-}
 
-main{
-    margin-bottom: 10vw;
+.main__sobre{
+    display: flex;
+    margin-bottom: 6.5rem;
+    gap: 5.25rem;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 .main__Principal{
-    
-    box-sizing: border-box;
+    margin-bottom: 6.5rem;
+    gap: 5.25rem;
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
-    
-    width: 60vw;
     
 }
 
@@ -66,55 +75,72 @@ main{
     display: flex;
     justify-content: center;
     
-    width: 60vw;
-    
 }
 
-.sobremim__div{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;  
+.principal__sobre{
+    gap: 5.25rem;
+}
+
+section{
     width: 50%;
-    height: 80%;
+    
 }
 
 .section__Home{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;  
-    width: 50%;
+    width: 42rem;
     height: 80%;
 }
 
 .chamada{
     box-sizing: border-box;
-    margin-bottom: 2vw;
+    margin-bottom: 2.5rem;
 }
 
 h1{
     color: var(--secundaria);
-    font-size: 1.8vw;
+    font-size: 2.25rem;
     font-family: var(--fonte-titulo);
-    line-height: 2.8vw;
+    line-height: 3.5rem;
 }
 
 span{
     color: var(--detalhes);
-    font-size: 1.8vw;
+    font-size: 2.25rem;
     font-family: var(--fonte-titulo);
-    line-height: 2.8vw;
+    line-height: 3.5rem;
 }
 
 article{
     box-sizing: border-box;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2.5rem;
 }
 
 p{
     color: var(--secundaria);
-    font-size: 1.1vw;
+    font-size: 1.5rem;
     font-family: var(--fonte-texto);
-    line-height: 1.8vw;
+    line-height: 2.25rem;
+}
+
+nav{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+ 
+h2{
+    color: var(--secundaria);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fonte-titulo);
+    line-height: 2.5rem;
+
 }
 
 .redes{
@@ -122,16 +148,16 @@ p{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    gap: 0.8vw;
+    gap: 1rem;
 
-    width: 19vw;
-    height: 3.7vw;
-    border-radius: 8px;
+    width: 23.625rem;
+    height: 4.25rem;
+    border-radius: 8px; 
     border: 2px solid var(--detalhes);
     background: var(--principal);
 
     color: var(--secundaria);;
-    font-size: 1.1vw;
+    font-size: 1.5rem;
     font-family: var(--fonte-texto);
     font-weight: 600;
     
@@ -141,63 +167,52 @@ p{
 .redes:hover{
     background: var(--principal-hover);
 }
- 
-h2{
-    color: var(--secundaria);
-    text-align: center;
-    font-size: 1.2vw;
-    font-family: var(--fonte-titulo);
-    line-height: 40px;
 
+img{
+    width: 2rem;
 }
 
-nav{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5vw;
-}
 
 aside{
     display: flex;
-    justify-content: center;
+    justify-content: initial;
     align-items: center;
     width: 50%;
     height: 100%;
     box-sizing: border-box;
 }
 
+.aside__sobre{
+    margin-top: 6rem;
+}
 
 
 .minha__foto{
-    width: 78%;
+    height: 33.25rem;
+    width: 29.1875rem;
     border-radius: 16px;
+    margin-top: 1.125rem;
 
     color: var(--secundaria);
 
-    box-shadow:  0.9vw -0.9vw 0px -0.2vw var(--principal), 0.9vw -0.9vw var(--detalhes);
+    box-shadow:  1.143125rem -1.125rem 0px -0.2vw var(--principal), 1.143125rem -1.125rem var(--detalhes);
     
 }
 
 footer{
     margin-top: auto;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--detalhes);
-    width: 100%;
-    height: 4vw;
+    height: 5rem;
+    width: 100vw;
 }
 
 footer p{
     color: var(--principal);
-    font-size: 1.2vw;
+    font-size: 1.5rem;
     font-family: var(--fonte-texto);
-    line-height: 1.8vw;
-}
-
-img{
-    width: 1.6vw;
+    line-height: 2.25rem;
 }
