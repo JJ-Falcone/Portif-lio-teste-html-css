@@ -2,10 +2,10 @@
 
 :root{
     font-size: 12px;
-    --principal: #E5E5CB;
-    --secundaria: #1A120B;
-    --detalhes: #3C2A21;
-    --principal-hover: #D5CEA3;
+    --principal: #000;
+    --secundaria: #f6f6f6;
+    --detalhes: #22D4FD ;
+    --principal-hover: #272727;
 
     --fonte-titulo: 'Krona One', sans-serif;
     --fonte-texto: 'Montserrat', sans-serif;
@@ -20,7 +20,6 @@ body{
     width: 75rem;
     flex-direction: column;
     box-sizing: border-box;
-    display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--principal);
@@ -29,6 +28,7 @@ body{
 }
 
 header{
+    gap: 5rem;
     width: 100%;
     justify-content: flex-start;
     align-items: end;
@@ -39,7 +39,6 @@ header{
 }
 
 header a{
-    margin: 0 5rem 0 0;
     text-decoration: none;
     color: var(--detalhes);
     font-size: 1.5rem;
@@ -90,7 +89,7 @@ section{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;  
-    width: 42rem;
+    
     height: 80%;
 }
 
@@ -188,7 +187,6 @@ aside{
 
 
 .minha__foto{
-    height: 33.25rem;
     width: 29.1875rem;
     border-radius: 16px;
     margin-top: 1.125rem;
@@ -215,4 +213,50 @@ footer p{
     font-size: 1.5rem;
     font-family: var(--fonte-texto);
     line-height: 2.25rem;
+}
+
+@media (max-width: 1024px) {
+    body{
+        width: 100%;
+    }
+
+    header{
+        margin:  3.625rem  0 5.625rem 0 ;
+        justify-content: center;
+    }
+
+    section{
+        width: 65%;
+    }
+
+    .main__Principal{
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .principal__sobre{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    aside{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .aside__sobre{
+        margin-top: 0;
+    }
+
+    .minha__foto{
+        width: 60%;
+        box-shadow:  1.143125rem -1.125rem 0px -0.2vw var(--principal), 1.143125rem -1.125rem var(--detalhes);
+    }
+}
+
+@media (max-width: 425px){
+
+    .minha__foto{
+        box-shadow:  0.75rem -0.75rem 0px -0.2vw var(--principal), 0.75rem -0.75rem var(--detalhes);
+    }
 }
